@@ -35,6 +35,6 @@ conn.request("POST", "/1/messages.json",
   urllib.urlencode({
     "token": "TOKEN",
     "user": "USER",
-    "message": "Klockan: " + (time.strftime("%H:%M:%S")) + " | " + "Antal platsannonser: " + str(antal_platsannonser),
+    "message": "Klockan: " + (time.strftime("%H:%M:%S")) + " | " + "Antal ptp-tjänster: " + str(antal_ledigajobb),
   }), { "Content-type": "application/x-www-form-urlencoded" })
 conn.getresponse()
