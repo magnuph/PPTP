@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import requests
 import time
 import pprint
@@ -6,8 +9,9 @@ def deprint(lista):
     pp = pprint.PrettyPrinter(indent=4)
     pp.pprint(lista)
 
-from_mail = 'admin@ganstarr.nu'
-url = "http://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?nyckelord=ptp"
+from_mail = ''
+nyckelord = ''
+url = "http://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?nyckelord=" + nyckelord
 headers = {'Accept' :'application/json', 'Accept-Language':'sv', 'From':from_mail}
 r = requests.get(url, headers=headers)
 
